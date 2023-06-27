@@ -1,0 +1,13 @@
+// Funkce pro výpis data
+function vypis_datum() {
+    // Nastavení jazyka
+    setlocale(LC_TIME, 'cs_CZ.utf8');
+    
+    // Vytvoření data
+    $datum = strftime('%A, %e. %B %Y');
+
+    return $datum;
+}
+
+// Registrace shortcode
+add_shortcode('datum_shortcode', 'vypis_datum');
